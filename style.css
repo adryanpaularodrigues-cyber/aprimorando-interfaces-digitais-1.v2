@@ -1,0 +1,285 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', 'Impact', sans-serif;
+}
+
+body {
+    background-color: #000000; 
+    color: #ffffff; 
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.7; 
+    transition: background-color 0.4s, color 0.4s; /* Transição suave ao mudar o modo */
+}
+
+/* Aplicando fontes marcantes apenas nos Títulos */
+h1, h2, h3, .logo {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Menu de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%; 
+    background-color: #111111; 
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.4s;
+}
+
+.logo {
+    font-size: 2.2rem; 
+    font-weight: 900;
+    color: #ff0000; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 1.3rem; 
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff0000; 
+}
+
+/* Estilo do Botão do Tema */
+.theme-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.theme-btn:hover {
+    background-color: #b30000;
+    transform: scale(1.05);
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=1470') center/cover no-repeat;
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-family: 'Permanent Marker', sans-serif; 
+    font-size: 4.8rem; 
+    margin-bottom: 1.5rem;
+    text-shadow: 4px 4px 0px #7a0000; 
+}
+
+.hero-content p {
+    font-size: 1.8rem; 
+    max-width: 800px; 
+    margin: 0 auto;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+
+/* Seção Importância */
+.about {
+    padding: 6rem 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    color: #ff0000; 
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem; 
+    text-shadow: 2px 2px 0px #000;
+}
+
+.about p {
+    font-size: 1.5rem; 
+    color: #e0e0e0;
+    transition: color 0.4s;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; 
+    flex-wrap: wrap;
+    padding: 0 5% 8rem 5%;
+}
+
+.card {
+    background-color: #1a0000; 
+    border: 2px solid #ff0000; 
+    padding: 0 0 3.5rem 0; 
+    overflow: hidden; 
+    flex: 1;
+    min-width: 320px; 
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.15);
+    transition: transform 0.3s, background-color 0.4s, border-color 0.4s;
+    
+    clip-path: polygon(12% 0%, 100% 0%, 100% 88%, 88% 100%, 0% 100%, 0% 12%);
+}
+
+.card:nth-child(even) {
+    background-color: #0a0a0a; 
+    border-color: #b30000; 
+    clip-path: polygon(0% 0%, 88% 0%, 100% 12%, 100% 100%, 12% 100%, 0% 88%);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ff0000;
+    transition: transform 0.3s;
+}
+
+.img-bordalesa { background-image: url('https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=600'); }
+.img-fumo { background-image: url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=600'); }
+.img-alho { background-image: url('https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?q=80&w=600'); }
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #ff0000; 
+    border-color: #ffffff;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+    border-bottom-color: #ffffff;
+}
+
+.card:hover h3, .card:hover p {
+    color: #000000 !important;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 2rem; 
+    padding: 0 1.5rem;
+    transition: color 0.4s;
+}
+
+.card p {
+    font-size: 1.2rem; 
+    color: #e0e0e0;
+    padding: 0 1.5rem;
+    transition: color 0.4s;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111111; 
+    border-top: 3px solid #ff0000; 
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 1.2rem; 
+    font-weight: 500;
+    transition: background-color 0.4s;
+}
+
+/* ==========================================
+   CONFIGURAÇÃO DO MODO CLARO (LIGHT MODE)
+============================================= */
+body.light-mode {
+    background-color: #f7f9f6; /* Fundo geral claro */
+    color: #111111; /* Texto geral escuro */
+}
+
+body.light-mode .navbar {
+    background-color: #ffffff; /* Menu branco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-links a {
+    color: #111111; /* Links do menu em preto */
+}
+
+body.light-mode .nav-links a:hover {
+    color: #ff0000;
+}
+
+body.light-mode .about p {
+    color: #333333; /* Texto da seção sobre mais escuro */
+}
+
+body.light-mode .card {
+    background-color: #ffffff; /* Fundo dos cards branco */
+    border: 2px solid #ff0000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .card:nth-child(even) {
+    background-color: #eaeaea; /* Card par ligeiramente cinza para contraste */
+}
+
+body.light-mode .card h3 {
+    color: #111111; /* Títulos dos cards em preto */
+}
+
+body.light-mode .card p {
+    color: #444444; /* Textos dos cards em cinza escuro */
+}
+
+/* Mantém o comportamento de inversão correta no Hover durante o modo claro */
+body.light-mode .card:hover h3, 
+body.light-mode .card:hover p {
+    color: #000000 !important;
+}
+
+body.light-mode footer {
+    background-color: #ffffff; /* Rodapé branco */
+    color: #111111;
+}
+
+/* Responsividade Básica (Mobile) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .hero-content h1 { font-size: 3.2rem; }
+    .hero-content p { font-size: 1.4rem; }
+    .about h2 { font-size: 2.4rem; }
+    .about p { font-size: 1.3rem; }
+}
